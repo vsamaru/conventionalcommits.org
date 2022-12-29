@@ -10,6 +10,6 @@ COPY ./ /src/
 COPY --from=0 /src/ /src/themes/conventional-commits/
 RUN hugo
 
-FROM nginx:stable
+FROM nginx:stable@sha256:f8b4a55777ba19cf3a042b022bcd3fd12bd2f9da03f973c1188ef90b8c1f4c47
 COPY --from=1 /src/public/ /usr/share/nginx/html/
 EXPOSE 80
