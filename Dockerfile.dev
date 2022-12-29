@@ -1,4 +1,4 @@
-FROM jguyomard/hugo-builder:latest
+FROM jguyomard/hugo-builder:latest@sha256:a9a13f8bffc59d10adf166b094313a417c8e4abe7021b1a34317e8f488945051
 FROM node:19.0.0-alpine
 WORKDIR /src/
 COPY --from=0 /usr/local/bin/hugo /usr/local/bin/hugo
