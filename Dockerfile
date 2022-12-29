@@ -5,7 +5,7 @@ RUN apk add make
 RUN npm install
 RUN npm run build
 
-FROM jguyomard/hugo-builder:latest
+FROM jguyomard/hugo-builder:latest@sha256:a9a13f8bffc59d10adf166b094313a417c8e4abe7021b1a34317e8f488945051
 COPY ./ /src/
 COPY --from=0 /src/ /src/themes/conventional-commits/
 RUN hugo
