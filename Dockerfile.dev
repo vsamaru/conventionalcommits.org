@@ -1,5 +1,5 @@
-FROM jguyomard/hugo-builder:latest
-FROM node:19.0.0-alpine
+FROM jguyomard/hugo-builder:latest@sha256:a9a13f8bffc59d10adf166b094313a417c8e4abe7021b1a34317e8f488945051
+FROM node:19.0.0-alpine@sha256:1a04e2ec39cc0c3a9657c1d6f8291ea2f5ccadf6ef4521dec946e522833e87ea
 WORKDIR /src/
 COPY --from=0 /usr/local/bin/hugo /usr/local/bin/hugo
 COPY ./ /src/
